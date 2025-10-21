@@ -1,6 +1,14 @@
 import { useState } from 'react';
 import { Microscope, ClipboardCheck, Award, GraduationCap, Thermometer, Scale, Gauge, Droplet } from 'lucide-react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
+import serviceTemperature from '@/assets/service-temperature.jpg';
+import serviceBalance from '@/assets/service-balance.jpg';
+import servicePressure from '@/assets/service-pressure.jpg';
+import servicePipettes from '@/assets/service-pipettes.jpg';
+import serviceCertification from '@/assets/service-certification.jpg';
+import serviceLabEquipment from '@/assets/service-lab-equipment.jpg';
+import serviceConsulting from '@/assets/service-consulting.jpg';
+import serviceTraining from '@/assets/service-training.jpg';
 
 const Services = () => {
   const [selectedService, setSelectedService] = useState<number | null>(null);
@@ -8,6 +16,7 @@ const Services = () => {
   const services = [
     {
       icon: Thermometer,
+      image: serviceTemperature,
       title: 'Calibração de Equipamentos',
       shortDesc: 'Calibração precisa de equipamentos médicos e laboratoriais',
       fullDesc: 'Realizamos calibração completa de termômetros clínicos, autoclaves, estufas, refrigeradores, banhos-maria e outros equipamentos que exigem controle de temperatura. Garantimos rastreabilidade ao Sistema Internacional de Unidades (SI).',
@@ -15,6 +24,7 @@ const Services = () => {
     },
     {
       icon: Scale,
+      image: serviceBalance,
       title: 'Verificação de Balanças',
       shortDesc: 'Verificação e calibração de balanças de precisão',
       fullDesc: 'Serviço especializado em balanças analíticas, semi-analíticas e de precisão utilizadas em laboratórios clínicos e farmacêuticos. Asseguramos exatidão em todas as pesagens críticas.',
@@ -22,6 +32,7 @@ const Services = () => {
     },
     {
       icon: Gauge,
+      image: servicePressure,
       title: 'Instrumentos de Pressão',
       shortDesc: 'Calibração de manômetros e medidores de pressão',
       fullDesc: 'Calibração de esfigmomanômetros (aparelhos de pressão arterial), manômetros, vacuômetros e outros instrumentos de medição de pressão essenciais para diagnósticos precisos.',
@@ -29,6 +40,7 @@ const Services = () => {
     },
     {
       icon: Droplet,
+      image: servicePipettes,
       title: 'Pipetas e Micropipetas',
       shortDesc: 'Calibração volumétrica de precisão',
       fullDesc: 'Calibração gravimétrica de pipetas automáticas, micropipetas e outros instrumentos volumétricos críticos para análises clínicas e pesquisas científicas.',
@@ -36,6 +48,7 @@ const Services = () => {
     },
     {
       icon: ClipboardCheck,
+      image: serviceCertification,
       title: 'Certificação e Rastreabilidade',
       shortDesc: 'Documentação técnica completa e rastreável',
       fullDesc: 'Emissão de certificados de calibração com rastreabilidade à Rede Brasileira de Calibração (RBC) e ao INMETRO, garantindo conformidade com normas ISO 17025 e regulamentações da ANVISA.',
@@ -43,6 +56,7 @@ const Services = () => {
     },
     {
       icon: Microscope,
+      image: serviceLabEquipment,
       title: 'Equipamentos Laboratoriais',
       shortDesc: 'Calibração de equipamentos analíticos',
       fullDesc: 'Serviços de calibração para centrífugas, espectrofotômetros, pHmetros, condutivímetros e outros equipamentos analíticos essenciais para laboratórios clínicos e de pesquisa.',
@@ -50,6 +64,7 @@ const Services = () => {
     },
     {
       icon: Award,
+      image: serviceConsulting,
       title: 'Consultoria em Qualidade',
       shortDesc: 'Assessoria para conformidade regulatória',
       fullDesc: 'Consultoria especializada para implementação de sistemas de gestão da qualidade, preparação para auditorias e adequação às normas regulatórias vigentes no setor de saúde.',
@@ -57,6 +72,7 @@ const Services = () => {
     },
     {
       icon: GraduationCap,
+      image: serviceTraining,
       title: 'Treinamentos',
       shortDesc: 'Capacitação técnica especializada',
       fullDesc: 'Cursos e treinamentos para equipes técnicas sobre boas práticas em metrologia, manuseio adequado de equipamentos e interpretação de certificados de calibração.',
@@ -93,19 +109,32 @@ const Services = () => {
               <button
                 key={index}
                 onClick={() => handleServiceClick(index)}
-                className="bg-card p-6 rounded-xl shadow-card hover:shadow-hover transition-smooth border border-border text-left group"
+                className="bg-card rounded-xl shadow-card hover:shadow-hover transition-smooth border border-border text-left group overflow-hidden"
               >
-                <div className="w-14 h-14 rounded-lg bg-gradient-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-smooth">
-                  <service.icon className="text-white" size={28} />
+                {/* Service Image */}
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-smooth duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  <div className="absolute top-4 right-4 w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center group-hover:scale-110 transition-smooth">
+                    <service.icon className="text-white" size={24} />
+                  </div>
                 </div>
-                <h3 className="font-semibold text-foreground mb-2 text-lg">
-                  {service.title}
-                </h3>
-                <p className="text-sm text-muted-foreground mb-4">
-                  {service.shortDesc}
-                </p>
-                <div className="text-primary text-sm font-medium group-hover:translate-x-1 transition-transform inline-flex items-center">
-                  Saiba mais →
+                
+                {/* Service Content */}
+                <div className="p-6">
+                  <h3 className="font-semibold text-foreground mb-2 text-lg">
+                    {service.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    {service.shortDesc}
+                  </p>
+                  <div className="text-primary text-sm font-medium group-hover:translate-x-1 transition-transform inline-flex items-center">
+                    Saiba mais →
+                  </div>
                 </div>
               </button>
             ))}
@@ -116,20 +145,31 @@ const Services = () => {
       {/* Service Detail Dialog */}
       {selectedService !== null && (
         <Dialog open={selectedService !== null} onOpenChange={handleCloseDialog}>
-          <DialogContent className="max-w-2xl">
+          <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
             <DialogHeader>
-              <div className="w-16 h-16 rounded-lg bg-gradient-primary flex items-center justify-center mb-4">
-                {(() => {
-                  const ServiceIcon = services[selectedService].icon;
-                  return <ServiceIcon className="text-white" size={32} />;
-                })()}
+              {/* Service Image in Dialog */}
+              <div className="relative h-64 rounded-xl overflow-hidden mb-4 -mt-6 -mx-6">
+                <img
+                  src={services[selectedService].image}
+                  alt={services[selectedService].title}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+                <div className="absolute bottom-4 left-6 right-6">
+                  <div className="w-16 h-16 rounded-lg bg-gradient-primary flex items-center justify-center mb-3">
+                    {(() => {
+                      const ServiceIcon = services[selectedService].icon;
+                      return <ServiceIcon className="text-white" size={32} />;
+                    })()}
+                  </div>
+                  <DialogTitle className="text-3xl text-white">{services[selectedService].title}</DialogTitle>
+                </div>
               </div>
-              <DialogTitle className="text-2xl">{services[selectedService].title}</DialogTitle>
-              <DialogDescription className="text-base pt-4">
+              <DialogDescription className="text-base pt-4 px-6">
                 {services[selectedService].fullDesc}
               </DialogDescription>
             </DialogHeader>
-            <div className="pt-4">
+            <div className="pt-4 px-6 pb-6">
               <h4 className="font-semibold text-foreground mb-3">O que está incluído:</h4>
               <ul className="space-y-2">
                 {services[selectedService].details.map((detail, idx) => (

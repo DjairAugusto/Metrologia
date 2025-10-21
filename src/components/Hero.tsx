@@ -21,11 +21,9 @@ const Hero = () => {
               <span>Certificação ISO 17025</span>
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight text-balance">
-              Precisão que{' '}
-              <span className="bg-gradient-primary bg-clip-text text-transparent">
-                Salva Vidas
-              </span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-balance">
+              <span className="text-foreground">Precisão que </span>
+              <span className="text-primary">Salva Vidas</span>
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl text-balance">

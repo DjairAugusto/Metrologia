@@ -1,0 +1,14 @@
+services:
+  - type: static
+    name: metrologia
+    env: node
+    plan: free
+    branch: main
+    buildCommand: npm run build
+    publishPath: dist
+    # Optional: add environment variables here
+    envVars:
+      - key: NODE_ENV
+        value: production
+        scope: RUN_AND_BUILD
+    # To use Bun, change buildCommand and env accordingly

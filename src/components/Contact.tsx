@@ -72,8 +72,8 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contato" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="contato" className="py-16 md:py-20 bg-background">
+      <div className="container mx-auto px-3 md:px-4">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">
@@ -84,9 +84,9 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
-          <div className="bg-card p-8 rounded-xl shadow-card border border-border">
+          <div className="bg-card p-6 md:p-8 rounded-xl shadow-card border border-border">
             <h3 className="text-2xl font-bold text-foreground mb-6">Envie uma Mensagem</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
@@ -154,7 +154,7 @@ const Contact = () => {
 
               <Button
                 type="submit"
-                className="w-full bg-gradient-primary text-white hover:opacity-90 transition-smooth shadow-card"
+                className="w-full bg-gradient-primary text-white hover:opacity-90 transition-smooth shadow-card py-3"
                 size="lg"
               >
                 Enviar Mensagem
@@ -193,7 +193,7 @@ const Contact = () => {
             </div>
 
             {/* Map Placeholder */}
-            <div className="bg-card rounded-xl overflow-hidden shadow-card border border-border h-64">
+            <div className="bg-card rounded-xl overflow-hidden shadow-card border border-border h-56 md:h-64">
               <div className="w-full h-full bg-gradient-primary flex items-center justify-center text-white">
                 <div className="text-center">
                   <MapPin size={48} className="mx-auto mb-2" />

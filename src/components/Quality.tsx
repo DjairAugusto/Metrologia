@@ -37,8 +37,8 @@ const Quality = () => {
   ];
 
   return (
-    <section id="qualidade" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="qualidade" className="py-16 md:py-20 bg-background">
+      <div className="container mx-auto px-3 md:px-4">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">
@@ -50,7 +50,7 @@ const Quality = () => {
         </div>
 
         {/* Certifications Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 md:mb-16">
           {certifications.map((cert, index) => (
             <div
               key={index}
@@ -70,7 +70,7 @@ const Quality = () => {
         </div>
 
         {/* Standards List */}
-        <div className="max-w-4xl mx-auto">
+  <div className="max-w-4xl mx-auto px-2 md:px-0">
           <div className="bg-card rounded-xl p-8 shadow-card border border-border">
             <h3 className="text-2xl font-bold text-foreground mb-6 text-center">
               Normas Técnicas Aplicadas

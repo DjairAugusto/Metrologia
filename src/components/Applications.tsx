@@ -33,8 +33,8 @@ const Applications = () => {
   ];
 
   return (
-    <section id="aplicacoes" className="py-20 bg-secondary/30">
-      <div className="container mx-auto px-4">
+    <section id="aplicacoes" className="py-16 md:py-20 bg-secondary/30">
+      <div className="container mx-auto px-3 md:px-4">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">
@@ -46,7 +46,7 @@ const Applications = () => {
         </div>
 
         {/* Applications Grid */}
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
           {applications.map((app, index) => (
             <div
               key={index}
@@ -78,7 +78,7 @@ const Applications = () => {
         </div>
 
         {/* Statistics */}
-        <div className="mt-16 grid sm:grid-cols-3 gap-6">
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6">
           <div className="bg-card p-6 rounded-xl shadow-card border border-border text-center">
             <div className="text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-2">
               99.9%

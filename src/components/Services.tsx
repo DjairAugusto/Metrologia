@@ -90,8 +90,8 @@ const Services = () => {
 
   return (
     <>
-      <section id="servicos" className="py-20 bg-background">
-        <div className="container mx-auto px-4">
+      <section id="servicos" className="py-16 md:py-20 bg-background">
+        <div className="container mx-auto px-3 md:px-4">
           {/* Header */}
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
@@ -104,7 +104,7 @@ const Services = () => {
           </div>
 
           {/* Services Grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {services.map((service, index) => (
               <button
                 key={index}

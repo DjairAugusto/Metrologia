@@ -31,12 +31,12 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Image */}
           <div className="relative order-2 lg:order-1">
-            <div className="relative rounded-2xl overflow-hidden shadow-hover">
-              <img
-                src={teamImage}
-                alt="Equipe de profissionais do laboratório"
-                className="w-full h-auto"
-              />
+              <div className="relative rounded-2xl overflow-hidden shadow-hover">
+                <img
+                  src={teamImage}
+                  alt="Equipe de profissionais do laboratório"
+                  className="w-full h-auto object-cover max-h-[420px] md:max-h-none"
+                />
             </div>
             
             {/* Decorative Elements */}
@@ -45,7 +45,7 @@ const About = () => {
           </div>
 
           {/* Content */}
-          <div className="space-y-8 order-1 lg:order-2">
+            <div className="space-y-6 md:space-y-8 order-1 lg:order-2">
             <div className="space-y-4">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">
                 Sobre a Metrologia Biomédica
@@ -63,7 +63,7 @@ const About = () => {
             </div>
 
             {/* Features Grid */}
-            <div className="grid sm:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {features.map((feature, index) => (
                 <div
                   key={index}

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="8" fill="#0f172a" />
+  <g transform="translate(8 8) scale(0.75)" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- medical cross -->
+    <path d="M20 4v12M12 12h16" stroke="#10b981" />
+    <path d="M20 8v8M16 12h8" stroke="#10b981" />
+    <!-- molecule line (stylized) -->
+    <circle cx="40" cy="12" r="6" fill="#10b981" stroke="none" />
+    <circle cx="52" cy="28" r="4" fill="#10b981" stroke="none" />
+    <circle cx="28" cy="28" r="4" fill="#10b981" stroke="none" />
+    <path d="M34 18 L48 24" stroke="#10b981" />
+    <path d="M30 18 L36 24" stroke="#10b981" />
+    <path d="M32 28 L40 28" stroke="#10b981" />
+  </g>
+</svg>

@@ -37,16 +37,21 @@ const Header = () => {
         isScrolled ? 'bg-background/95 backdrop-blur-md shadow-card' : 'bg-transparent'
       }`}
     >
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+      <div className="container mx-auto px-3 md:px-4">
+        <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <div className="w-10 h-10 rounded-lg bg-gradient-primary flex items-center justify-center">
               <span className="text-white font-bold text-xl">MB</span>
             </div>
+            {/* Desktop text */}
             <div className="hidden sm:block">
               <div className="font-bold text-lg text-foreground">Metrologia</div>
               <div className="text-xs text-muted-foreground -mt-1">Biomédica</div>
+            </div>
+            {/* Compact mobile label */}
+            <div className="block sm:hidden">
+              <div className="font-semibold text-sm text-foreground">Metrologia Biomédica</div>
             </div>
           </div>
 
@@ -90,15 +95,15 @@ const Header = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left px-4 py-3 text-sm font-medium text-foreground hover:text-primary hover:bg-secondary transition-smooth rounded-lg"
+                className="block w-full text-left px-4 py-4 text-base font-medium text-foreground hover:text-primary hover:bg-secondary transition-smooth rounded-lg"
               >
                 {item.label}
               </button>
             ))}
-            <div className="px-4 pt-2">
+            <div className="px-4 pt-3">
               <Button
                 onClick={() => scrollToSection('contato')}
-                className="w-full bg-gradient-primary text-white"
+                className="w-full bg-gradient-primary text-white py-3"
               >
                 Contato
               </Button>

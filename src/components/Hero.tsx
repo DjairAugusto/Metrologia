@@ -14,27 +14,27 @@ const Hero = () => {
   };
 
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center gradient-hero pt-20 overflow-hidden">
+    <section id="inicio" className="relative min-h-[80vh] md:min-h-screen flex items-center gradient-hero pt-16 md:pt-20 overflow-hidden">
       {/* Floating Particles Background */}
       <FloatingParticles />
       
-      <div className="container mx-auto px-4 py-20 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-4 py-12 md:py-20 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Text Content */}
-          <div className="space-y-8 animate-fade-in">
+          <div className="space-y-6 md:space-y-8 animate-fade-in">
             <div className="inline-flex items-center space-x-2 bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium">
               <Activity size={16} />
               <span>Certificação ISO 17025</span>
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-balance">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-balance">
               <span className="text-foreground">Precisão que </span>
               <span className="text-primary inline-block">
                 <TypingAnimation text="Salva Vidas" speed={150} />
               </span>
             </h1>
             
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl text-balance">
+            <p className="text-base md:text-lg text-muted-foreground max-w-full md:max-w-2xl text-balance">
               Metrologia aplicada à biomedicina com excelência e confiabilidade. 
               Calibração e verificação de equipamentos médicos seguindo os mais 
               rigorosos padrões de qualidade.
@@ -61,7 +61,7 @@ const Hero = () => {
             </div>
 
             {/* Stats - Animated Counters */}
-            <div className="grid grid-cols-3 gap-6 pt-8 border-t border-border">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 sm:pt-8 border-t border-border">
               <div className="text-center sm:text-left">
                 <AnimatedCounter end={15} suffix="+" duration={2000} />
                 <div className="text-sm text-muted-foreground mt-1">Anos de Experiência</div>
@@ -83,13 +83,13 @@ const Hero = () => {
               <img
                 src={heroImage}
                 alt="Laboratório moderno de metrologia biomédica"
-                className="w-full h-auto transition-transform duration-700 group-hover:scale-105"
+                className="w-full h-auto max-h-[420px] md:max-h-none object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent" />
             </div>
             
             {/* Floating Card - Animated */}
-            <div className="absolute -bottom-6 -left-6 bg-card p-6 rounded-xl shadow-hover border border-border max-w-xs hidden lg:block animate-fade-in hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <div className="absolute -bottom-4 -left-4 bg-card p-5 rounded-xl shadow-hover border border-border max-w-xs hidden md:block lg:block animate-fade-in hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <div className="flex items-center space-x-3">
                 <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
                   <Activity className="text-accent animate-pulse" size={24} />

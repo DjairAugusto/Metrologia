@@ -40,15 +40,9 @@ const Header = () => {
       <div className="container mx-auto px-3 md:px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
-            {/* Logo image - shows on desktop and mobile */}
-            <img src="/precisa-logo.svg" alt="Precisa" className="h-8 md:h-10" />
-
-            {/* Text fallback for very small screens (keeps spacing) */}
-            <div className="hidden sm:block">
-              <div className="font-bold text-lg text-foreground">Precisa</div>
-              <div className="text-xs text-muted-foreground -mt-1">Metrologia e Tecnologia</div>
-            </div>
+          <div className="flex items-center">
+            {/* Logo image only - no text */}
+            <img src="/precisa-logo.svg" alt="Precisa" className="h-12 md:h-14" />
           </div>
 
           {/* Desktop Navigation */}

@@ -77,27 +77,7 @@ const Applications = () => {
           ))}
         </div>
 
-        {/* Statistics */}
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6">
-          <div className="bg-card p-6 rounded-xl shadow-card border border-border text-center">
-            <div className="text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-2">
-              99.9%
-            </div>
-            <div className="text-sm text-muted-foreground">Taxa de conformidade nos testes</div>
-          </div>
-          <div className="bg-card p-6 rounded-xl shadow-card border border-border text-center">
-            <div className="text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-2">
-              24h
-            </div>
-            <div className="text-sm text-muted-foreground">Tempo médio de calibração</div>
-          </div>
-          <div className="bg-card p-6 rounded-xl shadow-card border border-border text-center">
-            <div className="text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-2">
-              100+
-            </div>
-            <div className="text-sm text-muted-foreground">Instituições de saúde atendidas</div>
-          </div>
-        </div>
+        {/* Statistics removed per request to keep layout clean */}
       </div>
     </section>
   );

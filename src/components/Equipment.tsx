@@ -33,41 +33,81 @@ const Equipment = () => {
         </div>
 
         {/* Equipment Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12 md:mb-16">
-          {equipmentList.map((equipment, index) => (
-            <div
-              key={index}
-              className="bg-card rounded-xl overflow-hidden shadow-card hover:shadow-hover transition-smooth border border-border group"
-            >
-              <div className="relative h-48 md:h-64 overflow-hidden">
-                <img
-                  src={equipment.image}
-                  alt={equipment.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <div className="absolute bottom-4 left-4 right-4">
-                  <div className="text-accent text-sm font-medium mb-1">
-                    {equipment.category}
+        {equipmentList.length === 1 ? (
+          <div className="flex justify-center mb-12 md:mb-16">
+            <div className="w-full sm:w-3/4 md:w-2/3 lg:w-1/2">
+              {equipmentList.map((equipment, index) => (
+                <div
+                  key={index}
+                  className="bg-card rounded-xl overflow-hidden shadow-card hover:shadow-hover transition-smooth border border-border group"
+                >
+                  <div className="relative h-48 md:h-64 overflow-hidden">
+                    <img
+                      src={equipment.image}
+                      alt={equipment.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    <div className="absolute bottom-4 left-0 right-0 px-4 flex flex-col items-center text-center">
+                      <div className="text-accent text-sm font-medium mb-1">
+                        {equipment.category}
+                      </div>
+                      <h3 className="text-white text-xl md:text-2xl font-semibold">
+                        {equipment.title}
+                      </h3>
+                    </div>
                   </div>
-                  <h3 className="text-white text-xl font-semibold">
-                    {equipment.title}
-                  </h3>
+                  <div className="p-6">
+                    <ul className="space-y-2">
+                      {equipment.items.map((item, idx) => (
+                        <li key={idx} className="flex items-start space-x-2 text-muted-foreground">
+                          <span className="text-primary mt-1">•</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12 md:mb-16">
+            {equipmentList.map((equipment, index) => (
+              <div
+                key={index}
+                className="bg-card rounded-xl overflow-hidden shadow-card hover:shadow-hover transition-smooth border border-border group"
+              >
+                <div className="relative h-48 md:h-64 overflow-hidden">
+                  <img
+                    src={equipment.image}
+                    alt={equipment.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  <div className="absolute bottom-4 left-0 right-0 px-4 flex flex-col items-center text-center">
+                    <div className="text-accent text-sm font-medium mb-1">
+                      {equipment.category}
+                    </div>
+                    <h3 className="text-white text-xl md:text-2xl font-semibold">
+                      {equipment.title}
+                    </h3>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <ul className="space-y-2">
+                    {equipment.items.map((item, idx) => (
+                      <li key={idx} className="flex items-start space-x-2 text-muted-foreground">
+                        <span className="text-primary mt-1">•</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
-              <div className="p-6">
-                <ul className="space-y-2">
-                  {equipment.items.map((item, idx) => (
-                    <li key={idx} className="flex items-start space-x-2 text-muted-foreground">
-                      <span className="text-primary mt-1">•</span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
 
         {/* Specifications */}
         <div className="bg-card rounded-xl p-8 shadow-card border border-border">

@@ -38,16 +38,11 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto px-3 md:px-4">
-        <div className="flex items-center justify-between h-20 md:h-24 py-2">
+  <div className="flex items-center justify-between h-24 md:h-28 py-3">
           {/* Logo */}
           <div className="flex items-center overflow-visible">
             {/* Logo image only - no text. object-contain + small bottom padding to avoid visual cropping */}
-            <img
-              src="/precisa-logo.png"
-              alt="Precisa"
-              className="h-12 md:h-16 object-contain block pb-1"
-              style={{ display: 'block' }}
-            />
+            <img src="/precisa-logo.svg" alt="Precisa" className="h-16 md:h-20 object-contain" />
           </div>
 
           {/* Desktop Navigation */}
@@ -87,7 +82,7 @@ const Header = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden fixed inset-0 z-50 bg-background/95 backdrop-blur-md animate-fade-in">
             <div className="flex items-center justify-between p-4 border-b border-border">
-              <img src="/precisa-logo.png" alt="Precisa" className="h-10 md:h-12 object-contain pb-1" />
+              <img src="/precisa-logo.svg" alt="Precisa" className="h-12 md:h-14 object-contain" />
               <button onClick={() => setIsMobileMenuOpen(false)} aria-label="Fechar menu" className="p-2">
                 <X size={24} />
               </button>

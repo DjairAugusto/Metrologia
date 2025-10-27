@@ -24,7 +24,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <img src="/precisa-logo.png" alt="Precisa" className="h-10" />
+              <img src="/precisa-logo.svg" alt="Precisa" className="h-10" />
               <div>
                 <div className="font-bold text-foreground">Precisa</div>
                 <div className="text-xs text-muted-foreground -mt-1">Metrologia e Tecnologia</div>

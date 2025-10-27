@@ -99,28 +99,27 @@ const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="tel:+551134567890"
+                  href="tel:+553134567890"
                   className="flex items-center space-x-2 text-sm text-muted-foreground hover:text-primary transition-smooth"
                 >
                   <Phone size={16} />
-                  <span>(11) 3456-7890</span>
+                  <span>(31) 3456-7890</span>
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:contato@metrologiabio.com.br"
+                  href="mailto:atendimento@precisa.com.br"
                   className="flex items-center space-x-2 text-sm text-muted-foreground hover:text-primary transition-smooth"
                 >
                   <Mail size={16} />
-                  <span>contato@metrologiabio.com.br</span>
+                  <span>atendimento@precisa.com.br</span>
                 </a>
               </li>
             </ul>
             <div className="mt-4 pt-4 border-t border-border">
               <p className="text-xs text-muted-foreground">
-                Rua das Ciências, 123<br />
-                São Paulo - SP<br />
-                CEP: 01234-567
+                Rua Rio Grande do Norte, 460 - Santa Efigênia<br />
+                Belo Horizonte - MG
               </p>
             </div>
           </div>

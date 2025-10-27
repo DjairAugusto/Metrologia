@@ -48,19 +48,19 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Telefone',
-      content: '(11) 3456-7890',
-      link: 'tel:+551134567890',
+      content: '(31) 3456-7890',
+      link: 'tel:+553134567890',
     },
     {
       icon: Mail,
       title: 'E-mail',
-      content: 'contato@metrologiabio.com.br',
-      link: 'mailto:contato@metrologiabio.com.br',
+      content: 'atendimento@precisa.com.br',
+      link: 'mailto:atendimento@precisa.com.br',
     },
     {
       icon: MapPin,
       title: 'Endereço',
-      content: 'Rua das Ciências, 123 - São Paulo, SP',
+      content: 'Rua Rio Grande do Norte, 460 - Santa Efigênia',
       link: 'https://maps.google.com',
     },
     {

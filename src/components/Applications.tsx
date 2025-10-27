@@ -10,13 +10,6 @@ const Applications = () => {
       image: '🩸',
     },
     {
-      icon: Heart,
-      title: 'Calibração de Ventiladores Pulmonares',
-      description: 'Verificação rigorosa de pressão, volume e fluxo em ventiladores mecânicos assegura suporte respiratório confiável para pacientes em estado crítico.',
-      impact: 'Aumenta segurança em UTIs e durante procedimentos cirúrgicos',
-      image: '🫁',
-    },
-    {
       icon: Stethoscope,
       title: 'Monitoramento de Pressão Arterial',
       description: 'Calibração de esfigmomanômetros e monitores multiparâmetros garante medições corretas de pressão arterial, fundamentais para diagnóstico e tratamento cardiovascular.',

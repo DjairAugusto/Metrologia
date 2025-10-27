@@ -32,7 +32,7 @@ const Services = () => {
       title: 'Instrumentos de Pressão',
       shortDesc: 'Calibração de manômetros e medidores de pressão',
       fullDesc: 'Calibração de esfigmomanômetros (aparelhos de pressão arterial), manômetros, vacuômetros e outros instrumentos de medição de pressão essenciais para diagnósticos precisos.',
-      details: ['Esfigmomanômetros', 'Manômetros clínicos', 'Vacuômetros', 'Ventiladores pulmonares'],
+      details: ['Esfigmomanômetros'],
     },
     {
       icon: Droplet,
@@ -40,7 +40,7 @@ const Services = () => {
       title: 'Pipetas e Micropipetas',
       shortDesc: 'Calibração volumétrica de precisão',
       fullDesc: 'Calibração gravimétrica de pipetas automáticas, micropipetas e outros instrumentos volumétricos críticos para análises clínicas e pesquisas científicas.',
-      details: ['Micropipetas', 'Pipetas automáticas', 'Dispensers', 'Método gravimétrico'],
+  details: ['Micropipetas', 'Pipetas automáticas', 'Método gravimétrico'],
     },
     // 'Equipamentos Laboratoriais' removed per request
   ];

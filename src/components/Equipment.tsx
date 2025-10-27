@@ -3,12 +3,7 @@ import equipment2 from '@/assets/equipment-2.jpg';
 
 const Equipment = () => {
   const equipmentList = [
-    {
-      image: equipment1,
-      category: 'Instrumentos de Medição',
-      title: 'Equipamentos de Precisão',
-      items: ['Paquímetros de alta precisão'],
-    },
+    // Removed 'Equipamentos de Precisão' item per request
     {
       image: equipment2,
       category: 'Equipamentos Laboratoriais',

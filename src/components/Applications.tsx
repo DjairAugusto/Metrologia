@@ -33,10 +33,10 @@ const Applications = () => {
   ];
 
   return (
-    <section id="aplicacoes" className="py-16 md:py-20 bg-secondary/30">
+  <section id="aplicacoes" className="py-12 md:py-16 bg-secondary/30">
       <div className="container mx-auto px-3 md:px-4">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+  <div className="text-center max-w-3xl mx-auto mb-12 space-y-4">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">
             Aplicações Práticas
           </h2>

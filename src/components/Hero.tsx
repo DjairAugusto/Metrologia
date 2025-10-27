@@ -14,11 +14,11 @@ const Hero = () => {
   };
 
   return (
-    <section id="inicio" className="relative min-h-[80vh] md:min-h-screen flex items-center gradient-hero pt-16 md:pt-20 overflow-hidden">
+    <section id="inicio" className="relative min-h-[70vh] md:min-h-[85vh] flex items-center gradient-hero pt-12 md:pt-16 overflow-hidden">
       {/* Floating Particles Background */}
       <FloatingParticles />
       
-      <div className="container mx-auto px-4 py-12 md:py-20 relative z-10">
+  <div className="container mx-auto px-4 py-10 md:py-16 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Text Content */}
           <div className="space-y-6 md:space-y-8 animate-fade-in max-w-prose">

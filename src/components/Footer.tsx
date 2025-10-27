@@ -20,16 +20,14 @@ const Footer = () => {
   return (
     <footer className="bg-card border-t border-border">
       <div className="container mx-auto px-3 md:px-4 py-8 md:py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-8">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-8">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 rounded-lg bg-gradient-primary flex items-center justify-center">
-                <span className="text-white font-bold text-xl">MB</span>
-              </div>
+            <div className="flex items-center space-x-3">
+              <img src="/precisa-logo.svg" alt="Precisa" className="h-10" />
               <div>
-                <div className="font-bold text-foreground">Metrologia</div>
-                <div className="text-xs text-muted-foreground -mt-1">Biomédica</div>
+                <div className="font-bold text-foreground">Precisa</div>
+                <div className="text-xs text-muted-foreground -mt-1">Metrologia e Tecnologia</div>
               </div>
             </div>
             <p className="text-sm text-muted-foreground">
@@ -40,28 +38,28 @@ const Footer = () => {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-white transition-smooth"
+                className="w-9 h-9 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-white transition-smooth"
                 aria-label="Facebook"
               >
-                <Facebook size={18} />
+                <Facebook size={16} />
               </a>
               <a
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-white transition-smooth"
+                className="w-9 h-9 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-white transition-smooth"
                 aria-label="Instagram"
               >
-                <Instagram size={18} />
+                <Instagram size={16} />
               </a>
               <a
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-white transition-smooth"
+                className="w-9 h-9 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-white transition-smooth"
                 aria-label="LinkedIn"
               >
-                <Linkedin size={18} />
+                <Linkedin size={16} />
               </a>
             </div>
           </div>
@@ -91,7 +89,6 @@ const Footer = () => {
               <li>Verificação de Balanças</li>
               <li>Instrumentos de Pressão</li>
               <li>Pipetas e Micropipetas</li>
-              <li>Certificação ISO 17025</li>
             </ul>
           </div>
 
@@ -132,7 +129,7 @@ const Footer = () => {
         <div className="pt-6 md:pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm text-muted-foreground text-center md:text-left">
-              © {currentYear} Metrologia Biomédica. Todos os direitos reservados.
+              © {currentYear} Precisa. Todos os direitos reservados.
             </p>
             <div className="flex space-x-6 text-sm text-muted-foreground">
               <button className="hover:text-primary transition-smooth">

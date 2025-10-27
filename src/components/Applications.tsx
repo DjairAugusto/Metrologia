@@ -41,7 +41,7 @@ const Applications = () => {
             Aplicações Práticas
           </h2>
           <p className="text-lg text-muted-foreground">
-            O impacto real da metrologia biomédica na saúde e segurança dos pacientes
+            O impacto real da metrologia na saúde e segurança dos pacientes
           </p>
         </div>
 

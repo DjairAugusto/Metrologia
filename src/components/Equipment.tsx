@@ -7,7 +7,7 @@ const Equipment = () => {
       image: equipment1,
       category: 'Instrumentos de Medição',
       title: 'Equipamentos de Precisão',
-      items: ['Micrômetros digitais', 'Paquímetros de alta precisão', 'Termômetros calibrados', 'Manômetros padrão'],
+      items: ['Paquímetros de alta precisão'],
     },
     {
       image: equipment2,
@@ -87,11 +87,7 @@ const Equipment = () => {
               </div>
             ))}
           </div>
-          <div className="mt-8 text-center">
-            <p className="text-muted-foreground">
-              Todos os equipamentos com rastreabilidade certificada pelo INMETRO e RBC
-            </p>
-          </div>
+          {/* certification/rastreabilidade statements removed per client request */}
         </div>
       </div>
     </section>

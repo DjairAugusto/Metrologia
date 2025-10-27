@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="320" height="72" viewBox="0 0 320 72" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Precisa logo">
+  <title>Precisa</title>
+  <rect width="320" height="72" fill="none"/>
+  <!-- simple mark: circular target -->
+  <g transform="translate(8,6)">
+    <circle cx="28" cy="30" r="20" fill="#0b5a62" />
+    <circle cx="28" cy="30" r="10" fill="#fff" />
+    <circle cx="28" cy="30" r="4" fill="#0b5a62" />
+  </g>
+  <!-- wordmark -->
+  <g transform="translate(72,18)">
+    <text x="0" y="38" font-family="Poppins, Arial, sans-serif" font-weight="700" font-size="36" fill="#0b5a62">Precisa</text>
+    <text x="0" y="58" font-family="Poppins, Arial, sans-serif" font-weight="500" font-size="10" fill="#808080">METROLOGIA E TECNOLOGIA</text>
+  </g>
+</svg>

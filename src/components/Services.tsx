@@ -5,10 +5,7 @@ import serviceTemperature from '@/assets/service-temperature.jpg';
 import serviceBalance from '@/assets/service-balance.jpg';
 import servicePressure from '@/assets/service-pressure.jpg';
 import servicePipettes from '@/assets/service-pipettes.jpg';
-import serviceCertification from '@/assets/service-certification.jpg';
 import serviceLabEquipment from '@/assets/service-lab-equipment.jpg';
-import serviceConsulting from '@/assets/service-consulting.jpg';
-import serviceTraining from '@/assets/service-training.jpg';
 
 const Services = () => {
   const [selectedService, setSelectedService] = useState<number | null>(null);
@@ -19,8 +16,8 @@ const Services = () => {
       image: serviceTemperature,
       title: 'Calibração de Equipamentos',
       shortDesc: 'Calibração precisa de equipamentos médicos e laboratoriais',
-      fullDesc: 'Realizamos calibração completa de termômetros clínicos, autoclaves, estufas, refrigeradores, banhos-maria e outros equipamentos que exigem controle de temperatura. Garantimos rastreabilidade ao Sistema Internacional de Unidades (SI).',
-      details: ['Termômetros clínicos', 'Autoclaves e estufas', 'Refrigeradores médicos', 'Banhos-maria', 'Certificado de calibração'],
+      fullDesc: 'Realizamos calibração completa de termômetros clínicos, autoclaves, estufas, refrigeradores, banhos-maria e outros equipamentos que exigem controle de temperatura.',
+      details: ['Termômetros clínicos', 'Autoclaves e estufas', 'Refrigeradores médicos', 'Banhos-maria'],
     },
     {
       icon: Scale,
@@ -36,7 +33,7 @@ const Services = () => {
       title: 'Instrumentos de Pressão',
       shortDesc: 'Calibração de manômetros e medidores de pressão',
       fullDesc: 'Calibração de esfigmomanômetros (aparelhos de pressão arterial), manômetros, vacuômetros e outros instrumentos de medição de pressão essenciais para diagnósticos precisos.',
-      details: ['Esfigmomanômetros', 'Manômetros clínicos', 'Vacuômetros', 'Ventiladores pulmonares', 'Certificação completa'],
+      details: ['Esfigmomanômetros', 'Manômetros clínicos', 'Vacuômetros', 'Ventiladores pulmonares'],
     },
     {
       icon: Droplet,
@@ -44,39 +41,15 @@ const Services = () => {
       title: 'Pipetas e Micropipetas',
       shortDesc: 'Calibração volumétrica de precisão',
       fullDesc: 'Calibração gravimétrica de pipetas automáticas, micropipetas e outros instrumentos volumétricos críticos para análises clínicas e pesquisas científicas.',
-      details: ['Micropipetas', 'Pipetas automáticas', 'Dispensers', 'Método gravimétrico', 'Certificado rastreável'],
-    },
-    {
-      icon: ClipboardCheck,
-      image: serviceCertification,
-      title: 'Certificação e Rastreabilidade',
-      shortDesc: 'Documentação técnica completa e rastreável',
-      fullDesc: 'Emissão de certificados de calibração com rastreabilidade à Rede Brasileira de Calibração (RBC) e ao INMETRO, garantindo conformidade com normas ISO 17025 e regulamentações da ANVISA.',
-      details: ['Certificados ISO 17025', 'Rastreabilidade RBC/INMETRO', 'Conformidade ANVISA', 'Documentação completa', 'Suporte técnico'],
+      details: ['Micropipetas', 'Pipetas automáticas', 'Dispensers', 'Método gravimétrico'],
     },
     {
       icon: Microscope,
       image: serviceLabEquipment,
       title: 'Equipamentos Laboratoriais',
       shortDesc: 'Calibração de equipamentos analíticos',
-      fullDesc: 'Serviços de calibração para centrífugas, espectrofotômetros, pHmetros, condutivímetros e outros equipamentos analíticos essenciais para laboratórios clínicos e de pesquisa.',
-      details: ['Centrífugas', 'Espectrofotômetros', 'pHmetros', 'Condutivímetros', 'Equipamentos analíticos'],
-    },
-    {
-      icon: Award,
-      image: serviceConsulting,
-      title: 'Consultoria em Qualidade',
-      shortDesc: 'Assessoria para conformidade regulatória',
-      fullDesc: 'Consultoria especializada para implementação de sistemas de gestão da qualidade, preparação para auditorias e adequação às normas regulatórias vigentes no setor de saúde.',
-      details: ['Sistema de gestão', 'Preparação para auditorias', 'Conformidade regulatória', 'Procedimentos operacionais', 'Capacitação técnica'],
-    },
-    {
-      icon: GraduationCap,
-      image: serviceTraining,
-      title: 'Treinamentos',
-      shortDesc: 'Capacitação técnica especializada',
-      fullDesc: 'Cursos e treinamentos para equipes técnicas sobre boas práticas em metrologia, manuseio adequado de equipamentos e interpretação de certificados de calibração.',
-      details: ['Boas práticas metrológicas', 'Manuseio de equipamentos', 'Interpretação de certificados', 'Normas técnicas', 'Certificado de participação'],
+      fullDesc: 'Serviços de calibração para centrífugas e outros equipamentos analíticos essenciais para laboratórios clínicos e de pesquisa.',
+      details: ['Centrífugas', 'Equipamentos analíticos'],
     },
   ];
 
@@ -98,8 +71,7 @@ const Services = () => {
               Nossos Serviços
             </h2>
             <p className="text-lg text-muted-foreground">
-              Soluções completas em metrologia biomédica com certificação e 
-              rastreabilidade garantidas
+              Soluções completas em metrologia para a saúde
             </p>
           </div>
 

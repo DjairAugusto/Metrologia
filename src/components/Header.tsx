@@ -40,18 +40,14 @@ const Header = () => {
       <div className="container mx-auto px-3 md:px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 rounded-lg bg-gradient-primary flex items-center justify-center">
-              <span className="text-white font-bold text-xl">MB</span>
-            </div>
-            {/* Desktop text */}
+          <div className="flex items-center space-x-3">
+            {/* Logo image - shows on desktop and mobile */}
+            <img src="/precisa-logo.svg" alt="Precisa" className="h-8 md:h-10" />
+
+            {/* Text fallback for very small screens (keeps spacing) */}
             <div className="hidden sm:block">
-              <div className="font-bold text-lg text-foreground">Metrologia</div>
-              <div className="text-xs text-muted-foreground -mt-1">Biomédica</div>
-            </div>
-            {/* Compact mobile label */}
-            <div className="block sm:hidden">
-              <div className="font-semibold text-sm text-foreground">Metrologia Biomédica</div>
+              <div className="font-bold text-lg text-foreground">Precisa</div>
+              <div className="text-xs text-muted-foreground -mt-1">Metrologia e Tecnologia</div>
             </div>
           </div>
 
@@ -83,32 +79,42 @@ const Header = () => {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="md:hidden p-2 text-foreground hover:text-primary transition-smooth"
             aria-label="Toggle menu"
+            aria-expanded={isMobileMenuOpen}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
-
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation Overlay */}
         {isMobileMenuOpen && (
-          <nav className="md:hidden py-4 border-t border-border animate-fade-in bg-background/95">
-            {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left px-4 py-4 text-base font-medium text-foreground hover:text-primary hover:bg-secondary transition-smooth rounded-lg"
-              >
-                {item.label}
+          <div className="md:hidden fixed inset-0 z-50 bg-background/95 backdrop-blur-md animate-fade-in">
+            <div className="flex items-center justify-between p-4 border-b border-border">
+              <img src="/precisa-logo.svg" alt="Precisa" className="h-8" />
+              <button onClick={() => setIsMobileMenuOpen(false)} aria-label="Fechar menu" className="p-2">
+                <X size={24} />
               </button>
-            ))}
-            <div className="px-4 pt-3">
-              <Button
-                onClick={() => scrollToSection('contato')}
-                className="w-full bg-gradient-primary text-white py-3"
-              >
-                Contato
-              </Button>
             </div>
-          </nav>
+
+            <nav className="flex flex-col items-center justify-center space-y-6 h-[calc(100vh-64px)] px-6">
+              {navItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className="w-full text-center text-xl font-medium text-foreground hover:text-primary rounded-lg py-3 transition-smooth bg-transparent"
+                >
+                  {item.label}
+                </button>
+              ))}
+
+              <div className="w-full flex justify-center">
+                <Button
+                  onClick={() => scrollToSection('contato')}
+                  className="w-11/12 max-w-xs bg-gradient-primary text-white py-3 shadow-card"
+                >
+                  Contato
+                </Button>
+              </div>
+            </nav>
+          </div>
         )}
       </div>
     </header>

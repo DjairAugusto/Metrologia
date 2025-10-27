@@ -4,19 +4,14 @@ import teamImage from '@/assets/team-lab.jpg';
 const About = () => {
   const features = [
     {
-      icon: Award,
-      title: 'Certificação INMETRO',
-      description: 'Acreditação ISO 17025 e conformidade com todas as normas regulatórias.',
-    },
-    {
       icon: Target,
       title: 'Precisão Comprovada',
-      description: 'Rastreabilidade metrológica garantida em todos os processos.',
+      description: 'Precisão comprovada em todos os nossos processos.',
     },
     {
       icon: Users,
       title: 'Equipe Especializada',
-      description: 'Profissionais altamente qualificados em metrologia biomédica.',
+      description: 'Profissionais altamente qualificados em metrologia e calibração.',
     },
     {
       icon: TrendingUp,
@@ -35,7 +30,7 @@ const About = () => {
                 <img
                   src={teamImage}
                   alt="Equipe de profissionais do laboratório"
-                  className="w-full h-auto object-cover max-h-[420px] md:max-h-none"
+                  className="w-full h-56 sm:h-72 md:h-96 object-cover rounded-2xl"
                 />
             </div>
             
@@ -48,17 +43,13 @@ const About = () => {
             <div className="space-y-6 md:space-y-8 order-1 lg:order-2">
             <div className="space-y-4">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-                Sobre a Metrologia Biomédica
+                Sobre a Precisa
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                A metrologia biomédica é a ciência que garante a precisão e confiabilidade 
-                dos equipamentos médicos e laboratoriais. Nossa missão é assegurar que cada 
-                medição realizada em ambientes de saúde seja precisa, segura e rastreável.
+                Nossa missão é assegurar que cada medição realizada em ambientes de saúde seja precisa, segura e rastreável.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Com mais de 15 anos de experiência, nosso laboratório é referência em 
-                calibração e verificação de equipamentos, contribuindo diretamente para 
-                a qualidade dos diagnósticos e tratamentos médicos.
+                Somos um laboratório de referência em calibração e verificação de equipamentos, comprometido com medições confiáveis que elevam a qualidade dos diagnósticos.
               </p>
             </div>
 

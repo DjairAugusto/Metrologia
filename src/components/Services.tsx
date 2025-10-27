@@ -5,7 +5,6 @@ import serviceTemperature from '@/assets/service-temperature.jpg';
 import serviceBalance from '@/assets/service-balance.jpg';
 import servicePressure from '@/assets/service-pressure.jpg';
 import servicePipettes from '@/assets/service-pipettes.jpg';
-import serviceLabEquipment from '@/assets/service-lab-equipment.jpg';
 
 const Services = () => {
   const [selectedService, setSelectedService] = useState<number | null>(null);
@@ -43,14 +42,7 @@ const Services = () => {
       fullDesc: 'Calibração gravimétrica de pipetas automáticas, micropipetas e outros instrumentos volumétricos críticos para análises clínicas e pesquisas científicas.',
       details: ['Micropipetas', 'Pipetas automáticas', 'Dispensers', 'Método gravimétrico'],
     },
-    {
-      icon: Microscope,
-      image: serviceLabEquipment,
-      title: 'Equipamentos Laboratoriais',
-      shortDesc: 'Calibração de equipamentos analíticos',
-      fullDesc: 'Serviços de calibração para centrífugas e outros equipamentos analíticos essenciais para laboratórios clínicos e de pesquisa.',
-      details: ['Centrífugas', 'Equipamentos analíticos'],
-    },
+    // 'Equipamentos Laboratoriais' removed per request
   ];
 
   const handleServiceClick = (index: number) => {

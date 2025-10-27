@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Linkedin, Mail, Phone } from 'lucide-react';
+import precisaLogo from '@/assets/precisa-logo.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -24,7 +25,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <img src="/precisa-logo.svg" alt="Precisa" className="h-10" />
+              <img src={precisaLogo} alt="Precisa" className="h-10" />
               <div>
                 <div className="font-bold text-foreground">Precisa</div>
                 <div className="text-xs text-muted-foreground -mt-1">Metrologia e Tecnologia</div>
